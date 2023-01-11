@@ -13,7 +13,9 @@ class AppRepository @Inject constructor(private val appService: AppService){
 
         return appService.getProducts().map{
             it.toProductItem()
+
         }
+
     }
 
 }

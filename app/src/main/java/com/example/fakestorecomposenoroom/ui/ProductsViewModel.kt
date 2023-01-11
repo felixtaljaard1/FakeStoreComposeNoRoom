@@ -22,6 +22,8 @@ class ProductsViewModel @Inject constructor(
 
     init{
         getProducts()
+        Log.i("WhereIsData", products.toString())
+
     }
 
     private fun getProducts() {
@@ -30,9 +32,11 @@ class ProductsViewModel @Inject constructor(
             try{
                 val products = getProductsUseCase()
                 _products.value = products
-                Log.i("WhereIsData", "Please Help4")
+                Log.i("WhereIsData", "Please Halp4")
 
-            } catch (_: Exception){}
+            } catch (error: Exception){
+                Log.i("where is data",error.toString())
+            }
         }
     }
 }
